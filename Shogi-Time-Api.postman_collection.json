@@ -1,0 +1,1015 @@
+{
+	"info": {
+		"_postman_id": "479a68a4-20f4-4e7b-b179-9b147898ccd1",
+		"name": "Clean Crud Architecture",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21670847"
+	},
+	"item": [
+		{
+			"name": "Cruds",
+			"item": [
+				{
+					"name": "crud/read",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "CfDJ8LSLMr6S0O1FndVeAahH7a4c1OEXMyNZvAZZPVvok-d7w7PDbaFPKhPuSE6fpYnaQItQYgz4bfvjIRJgnNC7hUiUe8HRO7gdi2jyc3s4zkN00wvjaAnyqv0-en2tQiiPQ66lH6uO-F-YZEloeZkbQr0GggCvTAaBb2V4K3QOXWUbg_VB8o5STC0Oi4lVA8MPzyEqj_gFSz7375qwt45z4DHr2e1-qQDwJa0hS3l-PLaymkD1jPq8vkCipcNTOz6Bl7rc6SYMV8R06XNCcGjGYwL9YA2Z_GLGGTK3dDp8Yk-PoBvV5sPqsYCEnu_hqLEZsV-IEqieR4rOO6MDGFSWIAUEdpHy0l5hinwNwaWLxqk8UfK0MKQbyqSvcil5j8P4V7cdqWWTyDrrS4EGnAH0MQjslZ91m5HqMXbcjPNpkxVxVL10K1yrVQ-jc_SHX0PZPMoZqSZvzKE38-J0mbDpyEk70isTVnDBINGlpVterCaQW-xpKNfKkzGtMS0LJQFoGOdtaag6xV7wrHRBJGHVM1alEcJAShXwn8BXINe77fvuRG9v-bUKuoT5ghweoPuevZQsVd8juxhDrz7OcfKgtxjS6az5UXSml3Me31A5ow9q9pdm_bai9UYYK1R3b6BiFvyoaKajeC3j4MXcByAoeGJZE1XHvM_yHb6GeEghW_0FIcBF76GikqdwK6P21S543A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "nocache",
+								"value": "true",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{Api-Url}}/crud/read?page=1&perPage=100",
+							"host": [
+								"{{Api-Url}}"
+							],
+							"path": [
+								"crud",
+								"read"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "perPage",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crud/read-by-id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "CfDJ8LSLMr6S0O1FndVeAahH7a4c1OEXMyNZvAZZPVvok-d7w7PDbaFPKhPuSE6fpYnaQItQYgz4bfvjIRJgnNC7hUiUe8HRO7gdi2jyc3s4zkN00wvjaAnyqv0-en2tQiiPQ66lH6uO-F-YZEloeZkbQr0GggCvTAaBb2V4K3QOXWUbg_VB8o5STC0Oi4lVA8MPzyEqj_gFSz7375qwt45z4DHr2e1-qQDwJa0hS3l-PLaymkD1jPq8vkCipcNTOz6Bl7rc6SYMV8R06XNCcGjGYwL9YA2Z_GLGGTK3dDp8Yk-PoBvV5sPqsYCEnu_hqLEZsV-IEqieR4rOO6MDGFSWIAUEdpHy0l5hinwNwaWLxqk8UfK0MKQbyqSvcil5j8P4V7cdqWWTyDrrS4EGnAH0MQjslZ91m5HqMXbcjPNpkxVxVL10K1yrVQ-jc_SHX0PZPMoZqSZvzKE38-J0mbDpyEk70isTVnDBINGlpVterCaQW-xpKNfKkzGtMS0LJQFoGOdtaag6xV7wrHRBJGHVM1alEcJAShXwn8BXINe77fvuRG9v-bUKuoT5ghweoPuevZQsVd8juxhDrz7OcfKgtxjS6az5UXSml3Me31A5ow9q9pdm_bai9UYYK1R3b6BiFvyoaKajeC3j4MXcByAoeGJZE1XHvM_yHb6GeEghW_0FIcBF76GikqdwK6P21S543A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "nocache",
+								"value": "true",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Api-Url}}/crud/read-by-id?id=12",
+							"host": [
+								"{{Api-Url}}"
+							],
+							"path": [
+								"crud",
+								"read-by-id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crud/seed-db",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "CfDJ8LSLMr6S0O1FndVeAahH7a4c1OEXMyNZvAZZPVvok-d7w7PDbaFPKhPuSE6fpYnaQItQYgz4bfvjIRJgnNC7hUiUe8HRO7gdi2jyc3s4zkN00wvjaAnyqv0-en2tQiiPQ66lH6uO-F-YZEloeZkbQr0GggCvTAaBb2V4K3QOXWUbg_VB8o5STC0Oi4lVA8MPzyEqj_gFSz7375qwt45z4DHr2e1-qQDwJa0hS3l-PLaymkD1jPq8vkCipcNTOz6Bl7rc6SYMV8R06XNCcGjGYwL9YA2Z_GLGGTK3dDp8Yk-PoBvV5sPqsYCEnu_hqLEZsV-IEqieR4rOO6MDGFSWIAUEdpHy0l5hinwNwaWLxqk8UfK0MKQbyqSvcil5j8P4V7cdqWWTyDrrS4EGnAH0MQjslZ91m5HqMXbcjPNpkxVxVL10K1yrVQ-jc_SHX0PZPMoZqSZvzKE38-J0mbDpyEk70isTVnDBINGlpVterCaQW-xpKNfKkzGtMS0LJQFoGOdtaag6xV7wrHRBJGHVM1alEcJAShXwn8BXINe77fvuRG9v-bUKuoT5ghweoPuevZQsVd8juxhDrz7OcfKgtxjS6az5UXSml3Me31A5ow9q9pdm_bai9UYYK1R3b6BiFvyoaKajeC3j4MXcByAoeGJZE1XHvM_yHb6GeEghW_0FIcBF76GikqdwK6P21S543A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Api-Url}}/crud/seed-db?count=3",
+							"host": [
+								"{{Api-Url}}"
+							],
+							"path": [
+								"crud",
+								"seed-db"
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crud/create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"My New Crud\",\r\n  \"department\": \"Crud Department\",\r\n  \"description\": \"It's super cruddy!\",\r\n  \"tags\": [\r\n    \"Create\", \"Create\", \"Update\", \"Delete\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Api-Url}}/crud/create",
+							"host": [
+								"{{Api-Url}}"
+							],
+							"path": [
+								"crud",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crud/update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"My New Crud\",\r\n  \"department\": \"Crud Department\",\r\n  \"description\": \"It's super cruddy!\",\r\n  \"tags\": [\r\n    \"Create\", \"Create\", \"Update\", \"Delete\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Api-Url}}/crud/update",
+							"host": [
+								"{{Api-Url}}"
+							],
+							"path": [
+								"crud",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crud/delete-by-id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"My New Crud\",\r\n  \"department\": \"Crud Department\",\r\n  \"description\": \"It's super cruddy!\",\r\n  \"tags\": [\r\n    \"Create\", \"Create\", \"Update\", \"Delete\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Api-Url}}/crud/delete-by-id?id=11",
+							"host": [
+								"{{Api-Url}}"
+							],
+							"path": [
+								"crud",
+								"delete-by-id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Ui Tokens",
+					"item": [
+						{
+							"name": "Get Unregistered User Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.collectionVariables.set(\"Kyclk-Ui-Token-Type\", \"Unregistered\");"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "client_id",
+											"value": "{{Kyclk-Ui-Client-Id}}",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "{{Kyclk-Ui-Client-Secret}}",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "testuser-unregistered",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Test123!",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Keycloak-Url}}/realms/{{Kyclk-Realm}}/protocol/openid-connect/token",
+									"host": [
+										"{{Keycloak-Url}}"
+									],
+									"path": [
+										"realms",
+										"{{Kyclk-Realm}}",
+										"protocol",
+										"openid-connect",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Registered User Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.collectionVariables.set(\"Kyclk-Ui-Token-Type\", \"Registered\");\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "client_id",
+											"value": "{{Kyclk-Ui-Client-Id}}",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "{{Kyclk-Ui-Client-Secret}}",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "app_user_test",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Admin123!",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Keycloak-Url}}/realms/{{Kyclk-Realm}}/protocol/openid-connect/token",
+									"host": [
+										"{{Keycloak-Url}}"
+									],
+									"path": [
+										"realms",
+										"{{Kyclk-Realm}}",
+										"protocol",
+										"openid-connect",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Refresh Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.collectionVariables.set(\"Kyclk-Api-Refresh-Token\", pm.response.json().refresh_token);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "client_id",
+											"value": "{{Kyclk-Ui-Client-Id}}",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "{{Kyclk-Ui-Client-Secret}}",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "refresh_token",
+											"type": "text"
+										},
+										{
+											"key": "refresh_token",
+											"value": "{{Kyclk-Ui-Refresh-Token}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{Keycloak-Url}}/realms/{{Kyclk-Realm}}/protocol/openid-connect/token",
+									"host": [
+										"{{Keycloak-Url}}"
+									],
+									"path": [
+										"realms",
+										"{{Kyclk-Realm}}",
+										"protocol",
+										"openid-connect",
+										"token"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									"pm.collectionVariables.set(\"Kyclk-Ui-Token\", pm.response.json().access_token);\r",
+									"pm.collectionVariables.set(\"Kyclk-Ui-Refresh-Token\", pm.response.json().refresh_token);"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Api",
+					"item": [
+						{
+							"name": "User Management",
+							"item": [
+								{
+									"name": "Create User",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"username\": \"TheAutomaTom3\",\r\n  \"firstName\": \"Tom\",\r\n  \"lastName\": \"Grossi\",\r\n  \"email\": \"TheAutomaTom3@gmail.com\",\r\n  \"password\": \"Admin123!\",\r\n  \"role\": \"Registered\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Crud-Api-Url}}/user-management-test-harness/create-user",
+											"host": [
+												"{{Crud-Api-Url}}"
+											],
+											"path": [
+												"user-management-test-harness",
+												"create-user"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Keycloak Server",
+					"item": [
+						{
+							"name": "Admin Token",
+							"item": [
+								{
+									"name": "Get Api Token",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.collectionVariables.set(\"Kyclk-Api-Token\", pm.response.json().access_token);"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "grant_type",
+													"value": "client_credentials",
+													"type": "text"
+												},
+												{
+													"key": "client_id",
+													"value": "{{Kyclk-Api-Client-Id}}",
+													"type": "text"
+												},
+												{
+													"key": "client_secret",
+													"value": "{{Kyclk-Api-Client-Secret}}",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{Keycloak-Url}}/realms/master/protocol/openid-connect/token",
+											"host": [
+												"{{Keycloak-Url}}"
+											],
+											"path": [
+												"realms",
+												"master",
+												"protocol",
+												"openid-connect",
+												"token"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Users",
+							"item": [
+								{
+									"name": "Create New User",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{Kyclk-Api-Token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"username\": \"string\",\r\n\t\"firstName\": \"string\",\r\n\t\"lastName\": \"string\",\r\n\t\"email\": \"e@email.com\",\r\n\t\"emailVerified\": false,\r\n\t\"enabled\": false,\r\n\t\"credentials\": [\r\n\t\t{\r\n\t\t\t\"temporary\": false,\r\n\t\t\t\"type\": \"password\",\r\n\t\t\t\"value\": \"string123!A\"\r\n\t\t}\r\n\t]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Keycloak-Url}}/admin/realms/{{Kyclk-Realm}}/users",
+											"host": [
+												"{{Keycloak-Url}}"
+											],
+											"path": [
+												"admin",
+												"realms",
+												"{{Kyclk-Realm}}",
+												"users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Search for User(s) of Realm",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{Kyclk-Api-Token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{Keycloak-Url}}/admin/realms/{{Kyclk-Realm}}/users?exact=true&firstName=test&lastName=reg",
+											"host": [
+												"{{Keycloak-Url}}"
+											],
+											"path": [
+												"admin",
+												"realms",
+												"{{Kyclk-Realm}}",
+												"users"
+											],
+											"query": [
+												{
+													"key": "first",
+													"value": "2",
+													"description": "Pagination offset",
+													"disabled": true
+												},
+												{
+													"key": "max",
+													"value": "2",
+													"description": "Maximum results size (defaults to 100)",
+													"disabled": true
+												},
+												{
+													"key": "Username",
+													"value": "",
+													"description": "String contained in a username",
+													"disabled": true
+												},
+												{
+													"key": "email",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "emailVerified",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "enabled",
+													"value": "true",
+													"disabled": true
+												},
+												{
+													"key": "exact",
+													"value": "true"
+												},
+												{
+													"key": "firstName",
+													"value": "test"
+												},
+												{
+													"key": "lastName",
+													"value": "reg"
+												},
+												{
+													"key": "search",
+													"value": "",
+													"description": "A String contained in username, first or last name, or email. Default search behavior is prefix-based (e.g., foo or foo*). Use foo for infix search and &quot;foo&quot; for exact search.",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add Role to User",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{Kyclk-Api-Token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"id\": \"02c3c6c8-d18d-42e9-806e-ce385ba164fd\",\r\n\t\"name\": \"Registered\",\r\n\t\"description\": \"Typical user access after registering.\",\r\n\t\"composite\": false,\r\n\t\"clientRole\": true,\r\n\t\"containerId\": \"6b8e22a4-f35f-4267-a1e0-42e705997dc3\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Keycloak-Url}}/admin/realms/{{Kyclk-Realm}}/users/85952082-454b-4261-8a9d-483fcd72e7e3/role-mappings/clients/{{Kyclk-Ui-Client-Uuid}}",
+											"host": [
+												"{{Keycloak-Url}}"
+											],
+											"path": [
+												"admin",
+												"realms",
+												"{{Kyclk-Realm}}",
+												"users",
+												"85952082-454b-4261-8a9d-483fcd72e7e3",
+												"role-mappings",
+												"clients",
+												"{{Kyclk-Ui-Client-Uuid}}"
+											],
+											"query": [
+												{
+													"key": "NOTE: User UUID must appear in the url path.",
+													"value": "NOTE: User UUID must appear in the url path.",
+													"description": "NOTE: User UUID must appear in the url path.",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Roles",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{Kyclk-Api-Token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Keycloak-Url}}/admin/realms/{{Kyclk-Realm}}/clients/{{Kyclk-Ui-Client-Uuid}}/roles",
+											"host": [
+												"{{Keycloak-Url}}"
+											],
+											"path": [
+												"admin",
+												"realms",
+												"{{Kyclk-Realm}}",
+												"clients",
+												"{{Kyclk-Ui-Client-Uuid}}",
+												"roles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Role Detail by Name",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{Kyclk-Api-Token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Keycloak-Url}}/admin/realms/{{Kyclk-Realm}}/clients/{{Kyclk-Ui-Client-Uuid}}/roles/Unregistered",
+											"host": [
+												"{{Keycloak-Url}}"
+											],
+											"path": [
+												"admin",
+												"realms",
+												"{{Kyclk-Realm}}",
+												"clients",
+												"{{Kyclk-Ui-Client-Uuid}}",
+												"roles",
+												"Unregistered"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Role Details",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{Kyclk-Api-Token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"username\": \"app_user_test\",\r\n\t\"firstName\": \"app_user_firstname\",\r\n\t\"lastName\": \"app_user_lastname\",\r\n\t\"email\": \"app_user@test.fr\",\r\n\t\"emailVerified\": true,\r\n\t\"enabled\": true,\r\n\t\"credentials\": [\r\n\t\t{\r\n\t\t\t\"temporary\": false,\r\n\t\t\t\"type\": \"password\",\r\n\t\t\t\"value\": \"mypassword\"\r\n\t\t}\r\n\t]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Keycloak-Url}}/admin/realms/{{Kyclk-Realm}}/clients/{{Kyclk-Ui-Client-Uuid}}/roles/Registered",
+											"host": [
+												"{{Keycloak-Url}}"
+											],
+											"path": [
+												"admin",
+												"realms",
+												"{{Kyclk-Realm}}",
+												"clients",
+												"{{Kyclk-Ui-Client-Uuid}}",
+												"roles",
+												"Registered"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Policy Test Harness",
+					"item": [
+						{
+							"name": "Any Policy Meets Requirement",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Kyclk-Ui-Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Crud-Api-Url}}/auth-policy-test-harness/any-policy-accepted",
+									"host": [
+										"{{Crud-Api-Url}}"
+									],
+									"path": [
+										"auth-policy-test-harness",
+										"any-policy-accepted"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registered Users Only",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Kyclk-Ui-Token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Crud-Api-Url}}/auth-policy-test-harness/registered-policy-required",
+									"host": [
+										"{{Crud-Api-Url}}"
+									],
+									"path": [
+										"auth-policy-test-harness",
+										"registered-policy-required"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Crud-Api-Url",
+			"value": "https://localhost:7281/",
+			"type": "string"
+		},
+		{
+			"key": "Keycloak-Url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "Kyclk-Realm",
+			"value": "Clean-Crud",
+			"type": "string"
+		},
+		{
+			"key": "Kyclk-Api-Client-Id",
+			"value": "clean-crud-api",
+			"type": "string"
+		},
+		{
+			"key": "Kyclk-Api-Client-Secret",
+			"value": "g1CxC84rlOuhSW1QIqchmykrdVD4IQv9",
+			"type": "string"
+		},
+		{
+			"key": "Kyclk-Api-Client-Uuid",
+			"value": "23add48a-75a7-4eaf-ae39-66e78991baba",
+			"type": "string"
+		},
+		{
+			"key": "Kyclk-Api-Token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "Kyclk-Ui-Client-Id",
+			"value": "clean-crud-ui",
+			"type": "string"
+		},
+		{
+			"key": "Kyclk-Ui-Client-Secret",
+			"value": "sh5vuqdnjmLzzCmRCLDkYlHUhn2c4893",
+			"type": "string"
+		},
+		{
+			"key": "Kyclk-Ui-Client-Uuid",
+			"value": "6b8e22a4-f35f-4267-a1e0-42e705997dc3",
+			"type": "string"
+		},
+		{
+			"key": "Kyclk-Ui-Token",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJOUWpCVVJlVlc3TkEyXy1yTlJtdHlIcHplU1FjRWZhRmI5MDdTMDlka1NvIn0.eyJleHAiOjE3MTcyNTA4OTMsImlhdCI6MTcxNzI1MDU5MywianRpIjoiNmE0MzVhNTctZDM3MC00MDJjLTgwZTgtNmIzMmVjMWQyZDkzIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9DbGVhbi1DcnVkIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6Ijk0MTdjYTQ2LTM4NmYtNGIzMy04OTliLTMwNTEzZWY1Yzc4OSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImNsZWFuLWNydWQtdWkiLCJzZXNzaW9uX3N0YXRlIjoiMDMyOTVjOTEtOGY0YS00MWM0LWE2YjUtMzJiYmQ3NTFjYmE2IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1jbGVhbi1jcnVkIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImNsZWFuLWNydWQtdWkiOnsicm9sZXMiOlsiUmVnaXN0ZXJlZCJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiMDMyOTVjOTEtOGY0YS00MWM0LWE2YjUtMzJiYmQ3NTFjYmE2IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJhcHBfdXNlcl9maXJzdG5hbWUgYXBwX3VzZXJfbGFzdG5hbWUiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhcHBfdXNlcl90ZXN0IiwiZ2l2ZW5fbmFtZSI6ImFwcF91c2VyX2ZpcnN0bmFtZSIsImZhbWlseV9uYW1lIjoiYXBwX3VzZXJfbGFzdG5hbWUiLCJlbWFpbCI6ImFwcF91c2VyQHRlc3QuZnIifQ.R2MmxprEgLzQGEYl2FpeHTwgR0168SuJIKMoLyrU3l7dtqDYSu69_nWyvVuRm3jmLQsjsX0WdhTCEklFJiZ2rJAJj8AgZ0vugOYRB3A-kZH1IK3mVmmpx7afdun6HG29UifG5UNJ_Eg3EA7PPTFFVI8cSoHhcx-NF5vUQaVK2zDmMVqfa1R_l4op_lekI8ePkHPyaav0jyniG_X5s0ccGKSzmR794U9xsJNioY26M-R8qh9rVCo7TiTX-4gVjTDmbI9QQtRHuBKz5CQPeRvxiwRVRzyznoHuYGaqJcV6j3zdAwezwoP0TRqhcRAjTSrcEeOttV6hDz4heQh8BgMnVg",
+			"type": "string"
+		},
+		{
+			"key": "Kyclk-Ui-Refresh-Token",
+			"value": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2OTg5YzY1Mi05MDFiLTRkNmEtYmE4Ni01MDc4ZDI5N2Q4ZWEifQ.eyJleHAiOjE3MTcyNTIzOTMsImlhdCI6MTcxNzI1MDU5MywianRpIjoiZmM4YTMzOGMtMDk2MS00MTAxLWFjYzEtYzBmMjE1NGI5Y2M1IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9DbGVhbi1DcnVkIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9DbGVhbi1DcnVkIiwic3ViIjoiOTQxN2NhNDYtMzg2Zi00YjMzLTg5OWItMzA1MTNlZjVjNzg5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6ImNsZWFuLWNydWQtdWkiLCJzZXNzaW9uX3N0YXRlIjoiMDMyOTVjOTEtOGY0YS00MWM0LWE2YjUtMzJiYmQ3NTFjYmE2Iiwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiMDMyOTVjOTEtOGY0YS00MWM0LWE2YjUtMzJiYmQ3NTFjYmE2In0.jvyobWwsG_Kt2kMi0ur_kCE1RnnkL4TzHdVVsVohGgJmXbXv2vKi_SCAoEu8CNJOTLSaQsnUkv1eQpgxC-NVXQ",
+			"type": "string"
+		},
+		{
+			"key": "Kyclk-Ui-Token-Type",
+			"value": "Registered"
+		},
+		{
+			"key": "Kyclk-Api-Refresh-Token",
+			"value": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2OTg5YzY1Mi05MDFiLTRkNmEtYmE4Ni01MDc4ZDI5N2Q4ZWEifQ.eyJleHAiOjE3MTcxNzY5MDIsImlhdCI6MTcxNzE3NTEwMiwianRpIjoiZmExYjJkM2MtZDY3NS00NWNlLWJhNzItMmJmOTY3YTA0MmJhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9DbGVhbi1DcnVkIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9DbGVhbi1DcnVkIiwic3ViIjoiOTQxN2NhNDYtMzg2Zi00YjMzLTg5OWItMzA1MTNlZjVjNzg5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6ImNsZWFuLWNydWQtdWkiLCJzZXNzaW9uX3N0YXRlIjoiNmVlZWFkNWUtMDMwNi00NTBlLTkyY2MtNDRiN2NmM2E5MDc0Iiwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiNmVlZWFkNWUtMDMwNi00NTBlLTkyY2MtNDRiN2NmM2E5MDc0In0.0123GYH0sKXdJSr6Bn7y7I-_KOdC1sIJgSqBHfqb_iY4zqpDRixSSGoKgJnLJ7VieiwVGG3A6Rq6zLHKN4iVdA"
+		}
+	]
+}

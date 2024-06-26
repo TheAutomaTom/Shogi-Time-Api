@@ -22,7 +22,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\ST.Api\ST.Api.csproj" />
+	  <ProjectReference Include="..\ST.Api\ST.Api.csproj" />
 	  <ProjectReference Include="..\ST.TestSetup\ST.TestSetup.csproj" />
 	</ItemGroup>
 

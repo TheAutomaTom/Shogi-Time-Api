@@ -1,15 +1,15 @@
 ﻿using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
-using ST.Core.Application.Features.Cruds.CreateCrud;
-using ST.Core.Domain.Models.Cruds;
-using ST.Core.Infra.ResultTypes;
-using ST.TestSetup.Config;
+using CCA.Core.Application.Features.Cruds.CreateCrud;
+using CCA.Core.Domain.Models.Cruds;
+using CCA.Core.Infra.ResultTypes;
+using CCA.TestSetup.Config;
 using Testcontainers.MsSql;
 using Testcontainers.Redis;
-using static ST.TestSetup.MockData.BogusGenerators;
+using static CCA.TestSetup.MockData.BogusGenerators;
 
-namespace ST.Tests.EndToEnd.Tests
+namespace CCA.Tests.EndToEnd.Tests
 {
 	public class Test_CrudController : IDisposable
   {

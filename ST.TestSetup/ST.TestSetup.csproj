@@ -26,8 +26,12 @@
 		<PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
 	</ItemGroup>
 
-	<ItemGroup>s
+	<ItemGroup>
 		<Using Include="Xunit" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ST.Api\ST.Api.csproj" />
 	</ItemGroup>
 	
 </Project>

@@ -1,8 +1,8 @@
 ﻿using Bogus;
-using ST.Core.Domain.Models.Cruds;
-using ST.Core.Domain.Models.Cruds.Repo;
+using CCA.Core.Domain.Models.Cruds;
+using CCA.Core.Domain.Models.Cruds.Repo;
 
-namespace ST.TestSetup.MockData
+namespace CCA.TestSetup.MockData
 {
   public static class BogusGenerators
   {

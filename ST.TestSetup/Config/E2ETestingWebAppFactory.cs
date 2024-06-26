@@ -1,9 +1,9 @@
-﻿using ST.Api;
+﻿using CCA.Api;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 
-namespace ST.TestSetup.Config
+namespace CCA.TestSetup.Config
 {
   public class E2ETestingWebAppFactory : WebApplicationFactory<Program>
   {

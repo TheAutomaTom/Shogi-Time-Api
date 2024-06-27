@@ -5,7 +5,7 @@
 
 services:
   Redis:
-    container_name: cca-redis
+    container_name: shogi-time-redis
     image: redis:7.2.4-alpine
     restart: always
     environment:
@@ -14,10 +14,10 @@ services:
       - '6379:6379'
     command: redis-server --save 20 1 --loglevel warning --requirepass $REDIS_PASS
     volumes:
-      - cca-cache:/data
+      - shogi-time-cache:/data
 
   MsSqlServer:
-    container_name: cca-sqlserver
+    container_name: shogi-time-sqlserver
     image: mcr.microsoft.com/mssql/server:2019-latest
     ports:
       - ${SQL_PORT}:1433
@@ -25,10 +25,10 @@ services:
       SA_PASSWORD: ${SQL_SA_PASS}
       ACCEPT_EULA: "Y"
     volumes:
-      - cca-sqldata:/var/opt/mssql
+      - shogi-time-sqldata:/var/opt/mssql
 
 
 volumes:
-  cca-sqldata:
-  cca-cache:
+  shogi-time-sqldata:
+  shogi-time-cache:
     driver: local

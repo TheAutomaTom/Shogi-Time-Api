@@ -6,6 +6,7 @@
 services:
 
   Keycloak:
+    container_name: auth-server
     image: bitnami/keycloak:latest
     environment:
       KEYCLOAK_ADMIN: ${KEYCLOAK_USER}      
@@ -24,6 +25,7 @@ services:
       - Postgres
 
   Postgres:
+    container_name: auth-db
     image: postgres
     environment:
       POSTGRES_DB: keycloak

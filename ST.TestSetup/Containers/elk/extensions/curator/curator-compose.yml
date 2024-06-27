@@ -11,6 +11,6 @@ services:
     environment:
       ELASTIC_PASSWORD: ${ELASTIC_PASSWORD:-}
     networks:
-      - elk
+      - shogi-time-elk
     depends_on:
       - elasticsearch

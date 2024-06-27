@@ -22,8 +22,8 @@ namespace ST.Api.Config
 
 			services.AddAuthorization(options =>
       {
-        options.AddPolicy("Unregistered", p => { p.RequireResourceRoles("Unregistered" /* OR */, "Registered"); });
-        options.AddPolicy("Registered", p => { p.RequireResourceRoles("Registered"); });
+        //options.AddPolicy("Unregistered", p => { p.RequireResourceRoles("Unregistered" /* OR */, "registered-player"); });
+        options.AddPolicy("Registered-Player", p => { p.RequireResourceRoles("registered-player"); });
       });
 
       services.AddKeycloakAuthorization(config);

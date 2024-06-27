@@ -53,12 +53,10 @@ namespace ST.Api
       // Internal services
       builder.Services.AddDbContexts(builder.Configuration);
       builder.Services.AddMediatorSupport();
-      builder.Services.AddElasticsearch(config);
+      //builder.Services.AddElasticsearch(config);
       builder.Services.AddEmailService(builder.Configuration);
 
       // Exposed features
-      builder.Services.AddGraphQL(builder.Configuration);
-
       builder.Services.AddControllers()
 											.AddJsonOptions(o => { 
 												o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); 
@@ -101,7 +99,7 @@ namespace ST.Api
 			app.UseSwaggerUI(o => o.EnableTryItOutByDefault());
 
 			app.MapControllers();
-      app.MapGraphQL();
+      //app.MapGraphQL();
 
       app.Run();
     }
